@@ -13,7 +13,10 @@ public class NoiseSettings
 
     public FilterType filterType;
 
+    [ConditionalHide("filterType", 0)]
     public SimpleNoiseSettings simpleNoiseSettings;
+
+    [ConditionalHide("filterType", 1)]
     public RigidNoiseSettings rigidNoiseSettings;
 
     [System.Serializable]
