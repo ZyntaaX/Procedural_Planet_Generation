@@ -22,9 +22,14 @@ public class PlanetEditor : Editor
             }
         }
 
-        if (GUILayout.Button("Generate Planet"))
+        if (GUILayout.Button("Re-Generate Planet"))
         {
             planet.GeneratePlanet();
+        }
+
+        if (GUILayout.Button("Generate Random Planet"))
+        {
+            Debug.Log("Not Implemented Yet!");
         }
 
         DrawSettingsEditor(planet.shapeSettings, planet.OnShapeSettingsUpdated, ref planet.shapeSettingsFoldout, ref shapeEditor);
